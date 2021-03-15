@@ -42,6 +42,7 @@ $(function(){
   });
   // AOS.js
   AOS.init()
+  });
   // swiper
   const swiper = new Swiper('.swiper-container', {
     loop: true,
@@ -78,4 +79,3 @@ $(function(){
     }
     // watchSlidesVisibility: true,
   });
-});
