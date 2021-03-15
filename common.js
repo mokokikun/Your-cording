@@ -52,15 +52,21 @@ $(function(){
     
     breakpoints: {
       650: {
-        slidesPerView: 3.3,
+        loop: true,
+        spaceBetween: 30,
+        slidesPerView: 3.3
       },
       990: { 
-        slidesPerView: 3.8,
+        loop: true,
+        spaceBetween: 30,
+        slidesPerView: 3.8
       },
       1100: {
-        spaceBetween: 62
-        
-      }
+        loop: true,
+        spaceBetween: 62,
+        slidesPerView:3.8
+      
+    }
     },
     centeredSlides : true,
     // If we need pagination
@@ -69,10 +75,10 @@ $(function(){
     },
     
     // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
+    // navigation: {
+     // nextEl: '.swiper-button-next',
+      //prevEl: '.swiper-button-prev'
+    //},
     
     autoplay: {
       delay: 5000,
