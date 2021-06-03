@@ -11,7 +11,7 @@ header {
   background: #FFFFFF;
   -webkit-box-shadow: 0 3px 6px #00000029;
           box-shadow: 0 3px 6px #00000029;
-  z-index: 4;
+  z-index: 5;
 }
 
 header .container {
@@ -446,7 +446,7 @@ section .price .mini-copy {
   display: none;
   font-size: 0.857rem;
   background: #F2F2F2;
-  padding: 20px 0 24px;
+  padding: 20px 18px 24px;
   border: 1px solid #E5E5E5;
   text-align: center;
   line-height: 2;
@@ -474,7 +474,9 @@ section .blog .contents {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 54px 10px 0;
+  max-width: 1280px;
+  margin: 54px auto 0;
+  padding: 0 10px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -483,13 +485,13 @@ section .blog .contents .content1 {
   display: inline-block;
   color: #333;
   max-width: 389px;
-  height: 387px;
+  width: calc((100%-240px)/3);
   margin: 0 10px;
   text-decoration: none;
   background: #FFFFFF;
-  position: relative;
   -webkit-box-shadow: 0 3px 6px #00000029;
           box-shadow: 0 3px 6px #00000029;
+  position: relative;
 }
 
 section .blog .contents .content1 .blog-img {
@@ -502,10 +504,11 @@ section .blog .contents .content1 .blog-img img {
   height: 100%;
 }
 
-section .blog .contents .content1 p {
+section .blog .contents .content1 .blog-inner1 .comment {
   font-size: 1.125rem;
-  margin: 14px auto 0;
-  text-align: center;
+  height: auto;
+  padding: 14px 18px 42px 18px;
+  text-align: left;
 }
 
 section .blog .contents .content1 .date {
@@ -513,19 +516,22 @@ section .blog .contents .content1 .date {
   position: absolute;
   right: 32px;
   bottom: 10px;
+  padding: 0;
 }
 
 section .blog .contents .content2 {
   display: inline-block;
   color: #333;
   max-width: 389px;
-  height: 387px;
+  width: calc((100%-240px)/3);
+  height: auto;
   margin: 0 10px;
   text-decoration: none;
   background: #FFFFFF;
   position: relative;
   -webkit-box-shadow: 0 3px 6px #00000029;
           box-shadow: 0 3px 6px #00000029;
+  position: relative;
 }
 
 section .blog .contents .content2 .blog-img {
@@ -538,10 +544,10 @@ section .blog .contents .content2 .blog-img img {
   height: 100%;
 }
 
-section .blog .contents .content2 p {
+section .blog .contents .content2 .blog-inner2 .comment {
   font-size: 1.125rem;
-  padding: 14px 18px 0 18px;
-  margin: 0 auto;
+  height: auto;
+  padding: 14px 18px 42px 18px;
   text-align: left;
 }
 
@@ -550,19 +556,22 @@ section .blog .contents .content2 .date {
   position: absolute;
   right: 32px;
   bottom: 10px;
+  padding: 0;
 }
 
 section .blog .contents .content3 {
   display: inline-block;
   color: #333;
   max-width: 389px;
-  height: 387px;
+  width: calc((100%-240px)/3);
+  height: auto;
   margin: 0 10px;
   text-decoration: none;
   background: #FFFFFF;
   position: relative;
   -webkit-box-shadow: 0 3px 6px #00000029;
           box-shadow: 0 3px 6px #00000029;
+  position: relative;
 }
 
 section .blog .contents .content3 .blog-img {
@@ -575,10 +584,14 @@ section .blog .contents .content3 .blog-img img {
   height: 100%;
 }
 
-section .blog .contents .content3 p {
+section .blog .contents .content3 .blog-inner3 {
+  height: auto;
+}
+
+section .blog .contents .content3 .blog-inner3 .comment {
   font-size: 1.125rem;
-  padding: 14px 18px 0 18px;
-  margin: 0 auto;
+  height: auto;
+  padding: 14px 18px 42px 18px;
   text-align: left;
 }
 
@@ -587,6 +600,7 @@ section .blog .contents .content3 .date {
   position: absolute;
   right: 32px;
   bottom: 10px;
+  padding: 0;
 }
 
 .works {
@@ -646,7 +660,7 @@ section .blog .contents .content3 .date {
 
 .works .swiper-container .swiper-wrapper .swiper-slide .text .detail {
   font-size: 0.875rem;
-  padding: 12px 18px 40px 18px;
+  padding: 12px 18px 12px 18px;
 }
 
 .works .swiper-container .swiper-wrapper .swiper-button-prev {
@@ -859,6 +873,19 @@ footer .container .copy-right {
 }
 
 @media (max-width: 757px) {
+  header .container {
+    padding: 18px 10px;
+  }
+  header .container .header-top img {
+    width: 38px;
+    height: 38px;
+  }
+  header .container .header-top h1 {
+    font-size: 1.3rem;
+  }
+  header .container .header-top h1 a {
+    width: 100%;
+  }
   header .container .contact-btn {
     display: none;
   }
@@ -872,8 +899,9 @@ footer .container .copy-right {
   }
   .btn-trigger {
     position: relative;
-    width: 50px;
-    height: 44px;
+    width: 38px;
+    height: 36px;
+    margin-top: 4px;
     cursor: pointer;
   }
   .btn-trigger span {
@@ -895,7 +923,7 @@ footer .container .copy-right {
     background-color: #FA41CC;
   }
   .btn-trigger span:nth-of-type(2) {
-    top: 20px;
+    top: 16px;
     background: #3BA6C9;
   }
   .btn-trigger span:nth-of-type(3) {
@@ -903,15 +931,15 @@ footer .container .copy-right {
     background: #6020B0;
   }
   #toggle-btn .active span:nth-of-type(1) {
-    -webkit-transform: translateY(20px) rotate(45deg);
-    transform: translateY(20px) rotate(45deg);
+    -webkit-transform: translateY(16.5px) rotate(45deg);
+    transform: translateY(16.5px) rotate(45deg);
   }
   #toggle-btn .active span:nth-of-type(2) {
     opacity: 0;
   }
   #toggle-btn .active span:nth-of-type(3) {
-    -webkit-transform: translateY(-20px) rotate(-45deg);
-    transform: translateY(-20px) rotate(-45deg);
+    -webkit-transform: translateY(-16.5px) rotate(-45deg);
+    transform: translateY(-16.5px) rotate(-45deg);
   }
   header .container nav .pc-nav {
     display: none;
@@ -921,10 +949,10 @@ footer .container .copy-right {
     top: 0;
     left: 0;
     display: inline-block;
-    width: 75vw;
+    width: 80vw;
     height: 100vh;
     text-align: center;
-    background: #EEFBFB;
+    background: #fff;
     -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
             box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
     z-index: 3;
@@ -933,7 +961,7 @@ footer .container .copy-right {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 214px;
+    width: 224px;
     margin: 16px auto 0;
   }
   header .container nav .phone-nav .company-logo img {
@@ -1087,7 +1115,10 @@ footer .container .copy-right {
 
 @media (max-width: 650px) {
   html {
-    font-size: 110%;
+    font-size: 94%;
+  }
+  header .container .header-top h1 {
+    margin-top: 6px;
   }
   header .container #toggle-btn .btn-trigger {
     width: 40px;
@@ -1158,8 +1189,18 @@ footer .container .copy-right {
   .features .wrapper .content3 .container .copy .small-copy br {
     display: none;
   }
+  .features .wrapper .content3 .container .copy {
+    margin-left: 0;
+  }
+  section .price .table table {
+    width: 90vw;
+  }
+  section .price .table table tr th br {
+    display: inline-block;
+  }
   section .price .table table tr td {
-    padding-right: 40px;
+    padding-left: 24px;
+    padding-right: 34px;
   }
   section .blog .contents {
     display: inline-block;
@@ -1168,13 +1209,22 @@ footer .container .copy-right {
   section .blog .contents .content1 {
     width: 80vw;
   }
+  section .blog .contents .content1 .blog-img {
+    max-width: none;
+  }
   section .blog .contents .content2 {
     width: 80vw;
     margin-top: 54px;
   }
+  section .blog .contents .content2 .blog-img {
+    max-width: none;
+  }
   section .blog .contents .content3 {
     width: 80vw;
     margin-top: 54px;
+  }
+  section .blog .contents .content3 .blog-img {
+    max-width: none;
   }
   .contact .container .form {
     width: 90vw;
